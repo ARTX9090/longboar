@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.product-list {
+    display: flex; /* Включаем Flexbox для контейнера карточек */
+    flex-direction: row; /* Располагаем элементы в ряд */
+    justify-content: space-around; /* Распределяем пространство между и вокруг карточек */
+    max-width: 1200px; /* Ограничиваем максимальную ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px; /* Фиксированная ширина карточки */
+    margin: 10px; /* Отступ между карточками */
+    display: flex; /* Включаем Flexbox для карточки для выравнивания содержимого вертикально*/
+    flex-direction: column; /* Располагаем элементы внутри карточки вертикально */
+    justify-content: space-between; /* Распределяем пространство между элементами внутри карточки */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивность для меньших экранов (пример) */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column; /* Перестраиваем в колонку на маленьких экранах */
+        align-items: center; /* Центрируем карточки по горизонтали */
+    }
+
+    .product-card {
+        width: 90%; /* Увеличиваем ширину карточки на маленьких экранах */
+        margin-bottom: 20px; /* Увеличиваем отступ между карточками в колонке */
+    }
+}
